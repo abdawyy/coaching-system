@@ -1,0 +1,95 @@
+﻿/* RTL Styles for Arabic Version */
+
+/* RTL Layout Adjustments */
+body.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Navigation RTL */
+.rtl .main-menu {
+    float: left !important;
+}
+
+.rtl .header-btns {
+    float: left !important;
+}
+
+.rtl .f-right {
+    float: left !important;
+}
+
+.rtl .f-left {
+    float: right !important;
+}
+
+/* Text Alignment */
+.rtl .text-center {
+    text-align: center;
+}
+
+.rtl .text-right {
+    text-align: right;
+}
+
+.rtl .hero__caption {
+    text-align: right;
+}
+
+/* Menu RTL */
+.rtl #navigation li {
+    float: right;
+    margin-left: 40px;
+    margin-right: 0;
+}
+
+.rtl .submenu {
+    right: 0;
+    left: auto;
+}
+
+/* Buttons RTL */
+.rtl .btn,
+.rtl .border-btn {
+    float: right;
+    margin-left: 15px;
+    margin-right: 0;
+}
+
+/* Language Switcher */
+.language-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    background: rgba(0,0,0,0.8);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.lang-btn {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+
+.lang-btn.active {
+    background: #ff6b35;
+    color: white;
+}
+
+.lang-btn:hover {
+    background: #ff6b35;
+    color: white;
+    text-decoration: none;
+}
+
+/* Arabic Font Improvements */
+.rtl body,
+.rtl h1, .rtl h2, .rtl h3, .rtl h4, .rtl h5, .rtl h6,
+.rtl p, .rtl span, .rtl a {
+    font-family: 'Tajawal', 'Arial', sans-serif;
+}
