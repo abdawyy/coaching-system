@@ -13,14 +13,14 @@ use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
-    // Show all users
+    // List all users
     public function index()
     {
-        $users = User::with(['package', 'workouts', 'files'])->latest()->get();
-        return response()->json($users);
+        $users = User::with(['package', 'workouts', 'files'])->latest()->paginate(10);
+        return view('admin.users.index', compact('users'));
     }
 
-    // Create user form
+    // Show create form
     public function create()
     {
         $packages = Package::all();
@@ -36,20 +36,30 @@ class UserController extends Controller
             'password' => 'required|string|min:6',
             'mobile'   => 'nullable|string|max:20',
             'package_id' => 'nullable|exists:packages,id',
+            'description' => 'nullable|string|max:1000',
         ]);
 
-        $user = User::create([
+        User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'mobile' => $request->mobile,
             'package_id' => $request->package_id,
+            'description' => $request->description,
         ]);
 
-        return response()->json(['message' => 'User created successfully', 'user' => $user]);
+        return redirect()->route('admin.users.index')->with('success', 'User created successfully.');
     }
 
-    // Update user info
+    // Edit form
+    public function edit($id)
+    {
+        $user = User::with(['package', 'workouts', 'files'])->findOrFail($id);
+        $packages = Package::all();
+        return view('admin.users.edit', compact('user', 'packages'));
+    }
+
+    // Update user
     public function update(Request $request, $id)
     {
         $user = User::findOrFail($id);
@@ -60,17 +70,19 @@ class UserController extends Controller
             'password' => 'nullable|string|min:6',
             'mobile'   => 'nullable|string|max:20',
             'package_id' => 'nullable|exists:packages,id',
+            'description' => 'nullable|string|max:1000',
         ]);
 
         $user->update([
             'name' => $request->name,
             'email' => $request->email,
-            'mobile' => $request->mobile ?? $user->mobile,
-            'package_id' => $request->package_id ?? $user->package_id,
+            'mobile' => $request->mobile,
+            'package_id' => $request->package_id,
+            'description' => $request->description,
             'password' => !empty($request->password) ? Hash::make($request->password) : $user->password,
         ]);
 
-        return response()->json(['message' => 'User updated successfully', 'user' => $user]);
+        return redirect()->route('admin.users.index')->with('success', 'User updated successfully.');
     }
 
     // Delete user
@@ -79,10 +91,10 @@ class UserController extends Controller
         $user = User::findOrFail($id);
         $user->delete();
 
-        return response()->json(['message' => 'User deleted successfully']);
+        return redirect()->route('admin.users.index')->with('success', 'User deleted successfully.');
     }
 
-    // Upload PDF or Excel file for a user
+    // Upload PDF or Excel for a user
     public function uploadFile(Request $request, $userId)
     {
         $request->validate([
@@ -92,23 +104,19 @@ class UserController extends Controller
 
         $user = User::findOrFail($userId);
         $file = $request->file('file');
-
         $path = $file->store('user_files', 'public');
 
-        $userFile = UserFile::create([
+        UserFile::create([
             'user_id' => $user->id,
             'file_path' => $path,
             'file_type' => $file->getClientOriginalExtension(),
             'description' => $request->description,
         ]);
 
-        return response()->json([
-            'message' => 'File uploaded successfully',
-            'file' => $userFile,
-        ]);
+        return back()->with('success', 'File uploaded successfully.');
     }
 
-    // Add multiple workout links for a user
+    // Add workouts (multiple)
     public function addWorkouts(Request $request, $userId)
     {
         $request->validate([
@@ -120,10 +128,9 @@ class UserController extends Controller
         ]);
 
         $user = User::findOrFail($userId);
-        $created = [];
 
         foreach ($request->workouts as $data) {
-            $created[] = UserWorkout::create([
+            UserWorkout::create([
                 'user_id' => $user->id,
                 'title' => $data['title'] ?? null,
                 'link' => $data['link'],
@@ -132,17 +139,7 @@ class UserController extends Controller
             ]);
         }
 
-        return response()->json([
-            'message' => 'Workouts added successfully',
-            'workouts' => $created,
-        ]);
-    }
-
-    // Get all workouts for a user
-    public function getWorkouts($userId)
-    {
-        $user = User::with(['workouts.package'])->findOrFail($userId);
-        return response()->json($user->workouts);
+        return back()->with('success', 'Workouts added successfully.');
     }
 
     // Delete a workout
@@ -151,6 +148,6 @@ class UserController extends Controller
         $workout = UserWorkout::findOrFail($workoutId);
         $workout->delete();
 
-        return response()->json(['message' => 'Workout deleted successfully']);
+        return back()->with('success', 'Workout deleted successfully.');
     }
 }

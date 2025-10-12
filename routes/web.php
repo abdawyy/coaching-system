@@ -5,6 +5,8 @@ use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Admin\PackageController;
 use App\Http\Controllers\GuestMessageController;
+use App\Http\Controllers\User\UserController;
+
 
 
 
@@ -43,4 +45,16 @@ Route::prefix('admin')->group(function () {
         Route::post('admin/guest/{id}/convert', [GuestMessageController::class, 'convertGuestToUser']);
 
     });
+});
+
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/user/profile', [UserController::class, 'profile']);
+    Route::post('/user/profile/update', [UserController::class, 'updateProfile']);
+
+    Route::post('/user/file/upload', [UserController::class, 'uploadFile']);
+    Route::get('/user/files', [UserController::class, 'myFiles']);
+    Route::delete('/user/file/{id}', [UserController::class, 'deleteFile']);
+
+    Route::get('/user/workouts', [UserController::class, 'myWorkouts']);
 });
