@@ -13,12 +13,12 @@ class AdminController extends Controller
     public function index()
     {
         $admins = Admin::latest()->paginate(10);
-        return view('admin.index', compact('admins'));
+        return view('admin.admin.index', compact('admins'));
     }
 
     public function create()
     {
-        return view('admin.create');
+        return view('admin.admin.create');
     }
 
     public function store(Request $request)
@@ -35,7 +35,7 @@ class AdminController extends Controller
             'password' => Hash::make($validated['password']),
         ]);
 
-        return redirect()->route('admin.index')->with('success', 'Admin created successfully.');
+        return redirect()->route('admin.admin.index')->with('success', 'Admin created successfully.');
     }
 
     public function edit(Admin $admin)
@@ -52,12 +52,12 @@ class AdminController extends Controller
 
         $admin->update($validated);
 
-        return redirect()->route('admin.index')->with('success', 'Admin updated successfully.');
+        return redirect()->route('admin.admin.index')->with('success', 'Admin updated successfully.');
     }
 
     public function destroy(Admin $admin)
     {
         $admin->delete();
-        return redirect()->route('admin.index')->with('success', 'Admin deleted successfully.');
+        return redirect()->route('admin.admin.index')->with('success', 'Admin deleted successfully.');
     }
 }

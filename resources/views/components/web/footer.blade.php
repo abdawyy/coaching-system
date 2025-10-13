@@ -8,7 +8,7 @@
                         <div class="single-footer-caption mb-50 text-center">
                             <!-- logo -->
                             <div class="footer-logo wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                                <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""
+                                <a href="index.html"><img src="web/assets/img/logo/logo2_footer.png" alt=""
                                         data-key="footer-logo"></a>
                             </div>
                             <!-- Footer Menu -->
@@ -66,49 +66,48 @@
     <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
 </div>
 <!-- JS here -->
-<script src="{{ asset('assets/js/vendor/modernizr-3.5.0.min.js') }}"></script>
+<script src="{{ asset('web/assets/js/vendor/modernizr-3.5.0.min.js') }}"></script>
 
 <!-- Jquery, Popper, Bootstrap -->
-<script src="{{ asset('assets/js/vendor/jquery-1.12.4.min.js') }}"></script>
-<script src="{{ asset('assets/js/popper.min.js') }}"></script>
-<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('web/assets/js/vendor/jquery-1.12.4.min.js') }}"></script>
+<script src="{{ asset('web/assets/js/popper.min.js') }}"></script>
+<script src="{{ asset('web/assets/js/bootstrap.min.js') }}"></script>
 
 <!-- Jquery Mobile Menu -->
-<script src="{{ asset('assets/js/jquery.slicknav.min.js') }}"></script>
+<script src="{{ asset('web/assets/js/jquery.slicknav.min.js') }}"></script>
 
 <!-- Jquery Slick , Owl-Carousel Plugins -->
-<script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
-<script src="{{ asset('assets/js/slick.min.js') }}"></script>
+<script src="{{ asset('web/assets/js/owl.carousel.min.js') }}"></script>
+<script src="{{ asset('web/assets/js/slick.min.js') }}"></script>
 
 <!-- One Page, Animated-HeadLine -->
-<script src="{{ asset('assets/js/wow.min.js') }}"></script>
-<script src="{{ asset('assets/js/animated.headline.js') }}"></script>
-<script src="{{ asset('assets/js/jquery.magnific-popup.js') }}"></script>
+<script src="{{ asset('web/assets/js/wow.min.js') }}"></script>
+<script src="{{ asset('web/assets/js/animated.headline.js') }}"></script>
+<script src="{{ asset('web/assets/js/jquery.magnific-popup.js') }}"></script>
 
 <!-- Date Picker -->
-<script src="{{ asset('assets/js/gijgo.min.js') }}"></script>
+<script src="{{ asset('web/assets/js/gijgo.min.js') }}"></script>
 
 <!-- Nice-select, sticky -->
-<script src="{{ asset('assets/js/jquery.nice-select.min.js') }}"></script>
-<script src="{{ asset('assets/js/jquery.sticky.js') }}"></script>
+<script src="{{ asset('web/assets/js/jquery.nice-select.min.js') }}"></script>
+<script src="{{ asset('web/assets/js/jquery.sticky.js') }}"></script>
 
 <!-- counter , waypoint, Hover Direction -->
-<script src="{{ asset('assets/js/jquery.counterup.min.js') }}"></script>
-<script src="{{ asset('assets/js/waypoints.min.js') }}"></script>
-<script src="{{ asset('assets/js/jquery.countdown.min.js') }}"></script>
-<script src="{{ asset('assets/js/hover-direction-snake.min.js') }}"></script>
+<script src="{{ asset('web/assets/js/jquery.counterup.min.js') }}"></script>
+<script src="{{ asset('web/assets/js/waypoints.min.js') }}"></script>
+<script src="{{ asset('web/assets/js/jquery.countdown.min.js') }}"></script>
+<script src="{{ asset('web/assets/js/hover-direction-snake.min.js') }}"></script>
 
 <!-- contact js -->
-<script src="{{ asset('assets/js/contact.js') }}"></script>
-<script src="{{ asset('assets/js/jquery.form.js') }}"></script>
-<script src="{{ asset('assets/js/jquery.validate.min.js') }}"></script>
-<script src="{{ asset('assets/js/mail-script.js') }}"></script>
-<script src="{{ asset('assets/js/jquery.ajaxchimp.min.js') }}"></script>
+<script src="{{ asset('web/assets/js/contact.js') }}"></script>
+<script src="{{ asset('web/assets/js/jquery.form.js') }}"></script>
+<script src="{{ asset('web/assets/js/jquery.validate.min.js') }}"></script>
+<script src="{{ asset('web/assets/js/mail-script.js') }}"></script>
+<script src="{{ asset('web/assets/js/jquery.ajaxchimp.min.js') }}"></script>
 
 <!-- Jquery Plugins, main Jquery -->
-<script src="{{ asset('assets/js/plugins.js') }}"></script>
-<script src="{{ asset('assets/js/main.js') }}"></script>
+<script src="{{ asset('web/assets/js/plugins.js') }}"></script>
+<script src="{{ asset('web/assets/js/main.js') }}"></script>
 
 <!-- Translation System -->
-<script src="{{ asset('assets/js/translations.js') }}"></script>
-<script src="{{ asset('translate.js') }}"></script>
+<script src="{{ asset('web/assets/js/translations.js') }}"></script>

@@ -32,7 +32,7 @@
                     <div class="col-xl-6 col-lg-6">
                         <div class="single-topic text-center mb-30">
                             <div class="topic-img">
-                                <img src="assets/img/gallery/cat1.png" alt="">
+                                <img src="web/assets/img/gallery/cat1.png" alt="">
                                 <div class="topic-content-box">
                                     <div class="topic-content">
                                         <h3 data-key="personal-training">Personal training</h3>
@@ -49,7 +49,7 @@
                     <div class="col-xl-6 col-lg-6">
                         <div class="single-topic text-center mb-30">
                             <div class="topic-img">
-                                <img src="assets/img/gallery/cat2.png" alt="">
+                                <img src="web/assets/img/gallery/cat2.png" alt="">
                                 <div class="topic-content-box">
                                     <div class="topic-content">
                                         <h3 data-key="group-training">Group training</h3>
@@ -83,7 +83,7 @@
                         <div class="single-cat text-center mb-30 wow fadeInUp" data-wow-duration="1s"
                             data-wow-delay=".2s">
                             <div class="cat-icon">
-                                <img src="assets/img/gallery/team1.png" alt="">
+                                <img src="web/assets/img/gallery/team1.png" alt="">
                             </div>
                             <div class="cat-cap">
                                 <h5><a href="services.html" data-key="body-building">Body Building</a></h5>
@@ -97,7 +97,7 @@
                         <div class="single-cat text-center mb-30 wow fadeInUp" data-wow-duration="1s"
                             data-wow-delay=".4s">
                             <div class="cat-icon">
-                                <img src="assets/img/gallery/team2.png" alt="">
+                                <img src="web/assets/img/gallery/team2.png" alt="">
                             </div>
                             <div class="cat-cap">
                                 <h5><a href="services.html" data-key="muscle-gain">Muscle Gain</a></h5>
@@ -111,7 +111,7 @@
                         <div class="single-cat text-center mb-30 wow fadeInUp" data-wow-duration="1s"
                             data-wow-delay=".6s">
                             <div class="cat-icon">
-                                <img src="assets/img/gallery/team3.png" alt="">
+                                <img src="web/assets/img/gallery/team3.png" alt="">
                             </div>
                             <div class="cat-cap">
                                 <h5><a href="services.html" data-key="weight-loss">Weight Loss</a></h5>
@@ -133,7 +133,7 @@
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
                         <div class="box snake mb-30">
                             <div class="gallery-img big-img"
-                                style="background-image: url(assets/img/gallery/gallery1.png);"></div>
+                                style="background-image: url(web/assets/img/gallery/gallery1.png);"></div>
                             <div class="overlay">
                                 <div class="overlay-content">
                                     <h3 data-key="muscle-gaining">Muscle gaining</h3>
@@ -146,7 +146,7 @@
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
                         <div class="box snake mb-30">
                             <div class="gallery-img big-img"
-                                style="background-image: url(assets/img/gallery/gallery2.png);"></div>
+                                style="background-image: url(web/assets/img/gallery/gallery2.png);"></div>
                             <div class="overlay">
                                 <div class="overlay-content">
                                     <h3 data-key="muscle-gaining">Muscle gaining</h3>
@@ -159,7 +159,7 @@
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
                         <div class="box snake mb-30">
                             <div class="gallery-img big-img"
-                                style="background-image: url(assets/img/gallery/gallery3.png);"></div>
+                                style="background-image: url(web/assets/img/gallery/gallery3.png);"></div>
                             <div class="overlay">
                                 <div class="overlay-content">
                                     <h3 data-key="muscle-gaining">Muscle gaining</h3>
@@ -172,7 +172,7 @@
                     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
                         <div class="box snake mb-30">
                             <div class="gallery-img big-img"
-                                style="background-image: url(assets/img/gallery/gallery4.png);"></div>
+                                style="background-image: url(web/assets/img/gallery/gallery4.png);"></div>
                             <div class="overlay">
                                 <div class="overlay-content">
                                     <h3 data-key="muscle-gaining">Muscle gaining</h3>
@@ -185,7 +185,7 @@
                     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
                         <div class="box snake mb-30">
                             <div class="gallery-img big-img"
-                                style="background-image: url(assets/img/gallery/gallery5.png);"></div>
+                                style="background-image: url(web/assets/img/gallery/gallery5.png);"></div>
                             <div class="overlay">
                                 <div class="overlay-content">
                                     <h3 data-key="muscle-gaining">Muscle gaining</h3>
@@ -198,7 +198,7 @@
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                         <div class="box snake mb-30">
                             <div class="gallery-img big-img"
-                                style="background-image: url(assets/img/gallery/gallery6.png);"></div>
+                                style="background-image: url(web/assets/img/gallery/gallery6.png);"></div>
                             <div class="overlay">
                                 <div class="overlay-content">
                                     <h3 data-key="muscle-gaining">Muscle gaining</h3>
@@ -231,7 +231,7 @@
                         <div class="properties mb-30 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
                             <div class="properties__card">
                                 <div class="about-icon">
-                                    <img src="assets/img/icon/price.svg" alt="">
+                                    <img src="web/assets/img/icon/price.svg" alt="">
                                 </div>
                                 <div class="properties__caption">
                                     <span class="month" data-key="six-month">6 month</span>
@@ -239,35 +239,35 @@
                                             class)</span></p>
 
                                     <div class="single-features">
-                                        <div class="features-icon"><img src="assets/img/icon/check.svg" alt=""></div>
+                                        <div class="features-icon"><img src="web/assets/img/icon/check.svg" alt=""></div>
                                         <div class="features-caption">
                                             <p data-key="free-riding">Free riding</p>
                                         </div>
                                     </div>
 
                                     <div class="single-features">
-                                        <div class="features-icon"><img src="assets/img/icon/check.svg" alt=""></div>
+                                        <div class="features-icon"><img src="web/assets/img/icon/check.svg" alt=""></div>
                                         <div class="features-caption">
                                             <p data-key="unlimited-equipments">Unlimited equipments</p>
                                         </div>
                                     </div>
 
                                     <div class="single-features">
-                                        <div class="features-icon"><img src="assets/img/icon/check.svg" alt=""></div>
+                                        <div class="features-icon"><img src="web/assets/img/icon/check.svg" alt=""></div>
                                         <div class="features-caption">
                                             <p data-key="personal-trainer">Personal trainer</p>
                                         </div>
                                     </div>
 
                                     <div class="single-features">
-                                        <div class="features-icon"><img src="assets/img/icon/check.svg" alt=""></div>
+                                        <div class="features-icon"><img src="web/assets/img/icon/check.svg" alt=""></div>
                                         <div class="features-caption">
                                             <p data-key="weight-losing">Weight losing classes</p>
                                         </div>
                                     </div>
 
                                     <div class="single-features mb-20">
-                                        <div class="features-icon"><img src="assets/img/icon/check.svg" alt=""></div>
+                                        <div class="features-icon"><img src="web/assets/img/icon/check.svg" alt=""></div>
                                         <div class="features-caption">
                                             <p data-key="month-to-month">Month to month</p>
                                         </div>
@@ -284,7 +284,7 @@
                         <div class="properties mb-30 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
                             <div class="properties__card">
                                 <div class="about-icon">
-                                    <img src="assets/img/icon/price.svg" alt="">
+                                    <img src="web/assets/img/icon/price.svg" alt="">
                                 </div>
                                 <div class="properties__caption">
                                     <span class="month" data-key="six-month">6 month</span>
@@ -292,35 +292,35 @@
                                             class)</span></p>
 
                                     <div class="single-features">
-                                        <div class="features-icon"><img src="assets/img/icon/check.svg" alt=""></div>
+                                        <div class="features-icon"><img src="web/assets/img/icon/check.svg" alt=""></div>
                                         <div class="features-caption">
                                             <p data-key="free-riding">Free riding</p>
                                         </div>
                                     </div>
 
                                     <div class="single-features">
-                                        <div class="features-icon"><img src="assets/img/icon/check.svg" alt=""></div>
+                                        <div class="features-icon"><img src="web/assets/img/icon/check.svg" alt=""></div>
                                         <div class="features-caption">
                                             <p data-key="unlimited-equipments">Unlimited equipments</p>
                                         </div>
                                     </div>
 
                                     <div class="single-features">
-                                        <div class="features-icon"><img src="assets/img/icon/check.svg" alt=""></div>
+                                        <div class="features-icon"><img src="web/assets/img/icon/check.svg" alt=""></div>
                                         <div class="features-caption">
                                             <p data-key="personal-trainer">Personal trainer</p>
                                         </div>
                                     </div>
 
                                     <div class="single-features">
-                                        <div class="features-icon"><img src="assets/img/icon/check.svg" alt=""></div>
+                                        <div class="features-icon"><img src="web/assets/img/icon/check.svg" alt=""></div>
                                         <div class="features-caption">
                                             <p data-key="weight-losing">Weight losing classes</p>
                                         </div>
                                     </div>
 
                                     <div class="single-features mb-20">
-                                        <div class="features-icon"><img src="assets/img/icon/check.svg" alt=""></div>
+                                        <div class="features-icon"><img src="web/assets/img/icon/check.svg" alt=""></div>
                                         <div class="features-caption">
                                             <p data-key="month-to-month">Month to month</p>
                                         </div>
@@ -337,7 +337,7 @@
                         <div class="properties mb-30 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
                             <div class="properties__card">
                                 <div class="about-icon">
-                                    <img src="assets/img/icon/price.svg" alt="">
+                                    <img src="web/assets/img/icon/price.svg" alt="">
                                 </div>
                                 <div class="properties__caption">
                                     <span class="month" data-key="six-month">6 month</span>
@@ -345,35 +345,35 @@
                                             class)</span></p>
 
                                     <div class="single-features">
-                                        <div class="features-icon"><img src="assets/img/icon/check.svg" alt=""></div>
+                                        <div class="features-icon"><img src="web/assets/img/icon/check.svg" alt=""></div>
                                         <div class="features-caption">
                                             <p data-key="free-riding">Free riding</p>
                                         </div>
                                     </div>
 
                                     <div class="single-features">
-                                        <div class="features-icon"><img src="assets/img/icon/check.svg" alt=""></div>
+                                        <div class="features-icon"><img src="web/assets/img/icon/check.svg" alt=""></div>
                                         <div class="features-caption">
                                             <p data-key="unlimited-equipments">Unlimited equipments</p>
                                         </div>
                                     </div>
 
                                     <div class="single-features">
-                                        <div class="features-icon"><img src="assets/img/icon/check.svg" alt=""></div>
+                                        <div class="features-icon"><img src="web/assets/img/icon/check.svg" alt=""></div>
                                         <div class="features-caption">
                                             <p data-key="personal-trainer">Personal trainer</p>
                                         </div>
                                     </div>
 
                                     <div class="single-features">
-                                        <div class="features-icon"><img src="assets/img/icon/check.svg" alt=""></div>
+                                        <div class="features-icon"><img src="web/assets/img/icon/check.svg" alt=""></div>
                                         <div class="features-caption">
                                             <p data-key="weight-losing">Weight losing classes</p>
                                         </div>
                                     </div>
 
                                     <div class="single-features mb-20">
-                                        <div class="features-icon"><img src="assets/img/icon/check.svg" alt=""></div>
+                                        <div class="features-icon"><img src="web/assets/img/icon/check.svg" alt=""></div>
                                         <div class="features-caption">
                                             <p data-key="month-to-month">Month to month</p>
                                         </div>
@@ -396,7 +396,7 @@
                 <div class="right-content2">
                     <!-- img -->
                     <div class="right-img wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
-                        <img src="assets/img/gallery/about.png" alt="" data-key="about-img">
+                        <img src="web/assets/img/gallery/about.png" alt="" data-key="about-img">
                     </div>
                 </div>
                 <div class="left-content2">
@@ -441,7 +441,7 @@
                         <div class="home-blog-single mb-30 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
                             <div class="blog-img-cap">
                                 <div class="blog-img">
-                                    <img src="assets/img/gallery/blog1.png" alt="" data-key="blog-img1">
+                                    <img src="web/assets/img/gallery/blog1.png" alt="" data-key="blog-img1">
                                 </div>
                                 <div class="blog-cap">
                                     <span data-key="blog-cat1">Gym & Fitness</span>
@@ -455,7 +455,7 @@
                         <div class="home-blog-single mb-30 wow fadeInUp" data-wow-duration="2s" data-wow-delay=".6s">
                             <div class="blog-img-cap">
                                 <div class="blog-img">
-                                    <img src="assets/img/gallery/blog2.png" alt="" data-key="blog-img2">
+                                    <img src="web/assets/img/gallery/blog2.png" alt="" data-key="blog-img2">
                                 </div>
                                 <div class="blog-cap">
                                     <span data-key="blog-cat2">Gym & Fitness</span>
@@ -471,7 +471,7 @@
 
         <!-- Blog Area End -->
         <!--? video_start -->
-        <div class="video-area section-bg2 d-flex align-items-center" data-background="assets/img/gallery/video-bg.png">
+        <div class="video-area section-bg2 d-flex align-items-center" data-background="web/assets/img/gallery/video-bg.png">
             <div class="container">
                 <div class="video-wrap position-relative">
                     <div class="video-icon">
@@ -489,7 +489,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8">
                         <div class="single-services mb-40 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
                             <div class="features-icon">
-                                <img src="assets/img/icon/icon1.svg" alt="" data-key="service-icon1">
+                                <img src="web/assets/img/icon/icon1.svg" alt="" data-key="service-icon1">
                             </div>
                             <div class="features-caption">
                                 <h3 data-key="service-title1">Location</h3>
@@ -501,7 +501,7 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
                         <div class="single-services mb-40 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
                             <div class="features-icon">
-                                <img src="assets/img/icon/icon2.svg" alt="" data-key="service-icon2">
+                                <img src="web/assets/img/icon/icon2.svg" alt="" data-key="service-icon2">
                             </div>
                             <div class="features-caption">
                                 <h3 data-key="service-title2">Phone</h3>
@@ -513,7 +513,7 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
                         <div class="single-services mb-40 wow fadeInUp" data-wow-duration="2s" data-wow-delay=".4s">
                             <div class="features-icon">
-                                <img src="assets/img/icon/icon3.svg" alt="" data-key="service-icon3">
+                                <img src="web/assets/img/icon/icon3.svg" alt="" data-key="service-icon3">
                             </div>
                             <div class="features-caption">
                                 <h3 data-key="service-title3">Email</h3>

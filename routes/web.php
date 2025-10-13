@@ -2,9 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AuthController;
-use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\PackageController;
-use App\Http\Controllers\GuestMessageController;
+use App\Http\Controllers\Admin\GuestMessageController;
 use App\Http\Controllers\User\UserController;
 
 

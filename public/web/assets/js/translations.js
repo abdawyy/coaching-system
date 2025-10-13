@@ -1,224 +1,305 @@
-﻿// Translation Data
+﻿// Translation maps
 const translations = {
     en: {
-        // Navigation
-        "nav-home": "Home",
-        "nav-about": "About",
-        "nav-courses": "Training Programs",
-        "nav-pricing": "Pricing",
-        "nav-gallery": "Gallery",
-        "nav-blog": "Blog",
-        "nav-blog-details": "Blog Details",
-        "nav-elements": "Elements",
-        "nav-contact": "Contact",
-        "btn-contact": "Contact Me",
-        
-        // Hero Section
-        "hero-greeting": "Hi, This is Zacson",
-        "hero-title": "Professional Gym Trainer",
-        "hero-btn": "View Training Programs",
-        
-        // Training Categories
-        "cat-personal-title": "Personal Training",
-        "cat-personal-desc": "Get personalized one-on-one training sessions tailored to your fitness goals. Professional guidance and customized workout plans for optimal results.",
-        "cat-group-title": "Group Training",
-        "cat-group-desc": "Join our energetic group training sessions for motivation and community support. Effective workouts in a fun, encouraging group environment.",
-        "btn-view-programs": "View Programs",
-        
-        // Services
-        "services-title": "What I Offer",
-        "service-bodybuilding": "Body Building",
-        "service-bodybuilding-desc": "Build muscle mass and strength with specialized bodybuilding programs designed for all levels.",
-        "service-muscle-gain": "Muscle Gain",
-        "service-muscle-gain-desc": "Effective muscle building programs with proper nutrition guidance for maximum results.",
-        "service-weight-loss": "Weight Loss",
-        "service-weight-loss-desc": "Achieve your weight loss goals with cardio, strength training, and dietary guidance.",
-        
-        // Gallery
-        "gallery-muscle-gain": "Muscle Building",
-        
-        // Pricing
+        "home": "Home",
+        "about": "About",
+        "courses": "Courses",
+        "pricing": "Pricing",
+        "gallery": "Gallery",
+        "blog": "Blog",
+        "blog-details": "Blog Details",
+        "elements": "Elements",
+        "contact": "Contact",
+        "contact-me": "Contact me",
+        "greeting": "Hi This is Zacson",
+        "job": "Gym Trainer",
+        "my-courses": "My Courses",
+        "personal-training": "Personal training",
+        "personal-desc": "You’ll look at graphs and charts in Task One, how to approach the task and the language needed for a successful answer.",
+        "group-training": "Group training",
+        "group-desc": "You’ll look at graphs and charts in Task One, how to approach the task and the language needed for a successful answer.",
+        "view-courses": "View Courses",
+        "what-i-offer": "What I Offer",
+        "body-building": "Body Building",
+        "body-desc": "You’ll look at graphs and charts in Task One, how to approach the task",
+        "muscle-gain": "Muscle Gain",
+        "muscle-desc": "You’ll look at graphs and charts in Task One, how to approach the task",
+        "weight-loss": "Weight Loss",
+        "weight-desc": "You’ll look at graphs and charts in Task One, how to approach the task",
+        "muscle-gaining": "Muscle gaining",
         "pricing-title": "Pricing",
-        "pricing-6month": "6 months",
-        "pricing-price": "$30/m",
-        "pricing-single-class": "(Single class)",
-        "feature-free-riding": "Free riding",
-        "feature-unlimited-equipment": "Unlimited equipment",
-        "feature-personal-trainer": "Personal trainer",
-        "feature-weight-loss-classes": "Weight loss classes",
-        "feature-month-to-month": "Month to month",
-        "btn-join-now": "Join Now",
-        
-        // About
+        "six-month": "6 month",
+        "price": "$30/m",
+        "single-class": "(Single class)",
+        "free-riding": "Free riding",
+        "unlimited-equipments": "Unlimited equipments",
+        "personal-trainer": "Personal trainer",
+        "weight-losing": "Weight losing classes",
+        "month-to-month": "Month to month",
+        "join-now": "Join Now",
         "about-title": "About Me",
-        "about-desc1": "I am a certified professional fitness trainer with over 10 years of experience helping people achieve their fitness goals. My approach combines proven training methods with personalized attention to ensure maximum results.",
-        "about-desc2": "Whether you're looking to build muscle, lose weight, or improve your overall fitness, I provide comprehensive training programs tailored to your specific needs and goals.",
-        "btn-my-courses": "My Training Programs",
-        
-        // Blog
+        "about-p1": "You’ll look at graphs and charts in Task One, how to approach the task and the language needed for a successful answer. You’ll examine Task Two questions and learn how to plan, write and check academic essays.",
+        "about-p2": "Task One, how to approach the task and the language needed for a successful answer. You’ll examine Task Two questions and learn how to plan, write and check academic essays.",
+        "about-btn": "My Courses",
         "blog-title": "From Blog",
-        "blog-category": "Gym & Fitness",
-        "blog-post1": "Essential Tips for Effective Muscle Building",
-        "blog-post2": "Nutrition Guide for Weight Loss Success",
-        
-        // Contact
-        "contact-location": "Location",
-        "contact-location-desc": "Visit our modern fitness center in the heart of the city",
-        "contact-phone": "Phone",
-        "contact-email": "Email",
-        
-        // Footer
-        "footer-copyright": "All rights reserved | This template is made with",
-        "footer-by": "by",
-        
-        // Language Switcher
-        "lang-english": "English",
-        "lang-arabic": "العربية"
+        "blog-cat1": "Gym & Fitness",
+        "blog-title1": "Your Antibiotic One Day To 10 Day Options",
+        "blog-cat2": "Gym & Fitness",
+        "blog-title2": "Your Antibiotic One Day To 10 Day Options",
+        "service-title1": "Location",
+        "service-desc1": "You’ll look at graphs and charts in Task One, how to approach",
+        "service-title2": "Phone",
+        "service-phone1": "(90) 277 278 2566",
+        "service-phone2": "(78) 267 256 2578",
+        "service-title3": "Email",
+        "service-email1": "jacson767@gmail.com",
+        "service-email2": "contact56@zacsion.com",
+        "footer-home": "Home",
+        "footer-about": "About",
+        "footer-courses": "Courses",
+        "footer-pricing": "Pricing",
+        "footer-gallery": "Gallery",
+        "footer-contact": "Contact",
+
+        "hero-title": "About Me",
+        "team1-title": "Body Building",
+        "team1-desc": "Learn proper body building techniques.",
+        "team1-img": "assets/img/gallery/team1.png",
+        "team2-title": "Muscle Gain",
+        "team2-desc": "Tips and workouts for muscle gain.",
+        "team2-img": "assets/img/gallery/team2.png",
+        "team3-title": "Weight Loss",
+        "team3-desc": "Effective weight loss strategies.",
+        "team3-img": "assets/img/gallery/team3.png",
+        "about-title": "About Me",
+        "about-desc1": "I am a professional trainer with years of experience.",
+        "about-desc2": "I help clients reach their fitness goals efficiently.",
+        "about-btn": "My Courses",
+        "about-img": "assets/img/gallery/about.png",
+        "blog-title": "From Blog",
+        "blog1-title": "Top 10 Fitness Tips",
+        "blog1-category": "Fitness",
+        "blog1-img": "assets/img/gallery/blog1.png",
+        "blog2-title": "Healthy Eating Habits",
+        "blog2-category": "Nutrition",
+        "blog2-img": "assets/img/gallery/blog2.png",
+        "hero-title": "Courses",
+        "offer-title": "What I Offer",
+        "team1-title": "Body Building",
+        "team1-desc": "Learn proper body building techniques.",
+        "team1-img": "assets/img/gallery/team1.png",
+        "team2-title": "Muscle Gain",
+        "team2-desc": "Tips and workouts for muscle gain.",
+        "team2-img": "assets/img/gallery/team2.png",
+        "team3-title": "Weight Loss",
+        "team3-desc": "Effective weight loss strategies.",
+        "team3-img": "assets/img/gallery/team3.png",
+        "cat1-title": "Personal training",
+        "cat1-desc": "Learn how to train individually for best results.",
+        "cat1-img": "assets/img/gallery/cat1.png",
+        "cat1-btn": "View Courses",
+        "cat2-title": "Group training",
+        "cat2-desc": "Train in a group and stay motivated.",
+        "cat2-img": "assets/img/gallery/cat2.png",
+        "cat2-btn": "View Courses",
+        "hero-title": "Pricing",
+        "hero-title-pricing": "Pricing",
+        "hero-title-about": "About Me",
+        "hero-title-gallery": "Gallery",
+        "hero-title-courses": "Courses",
+        "hero-contact-me": "Contact Me",
+        "get_in_touch": "Get in Touch",
+        "placeholder_message": "Enter Message",
+        "placeholder_name": "Enter your name",
+        "placeholder_email": "Email",
+        "placeholder_subject": "Enter Subject",
+        "btn_send": "Send",
+        "address_title": "Buttonwood, California",
+        "address_text": "Rosemead, CA 91770",
+        "phone_number": "+1 253 565 2365",
+        "phone_time": "Mon to Fri 9am to 6pm",
+        "email_address": "support@colorlib.com",
+        "email_text": "Send us your query anytime!",
+        "placeholder_name": "Enter your name",
+        "placeholder_email": "Enter email address",
+        "placeholder_subject": "Enter Subject",
+
+
+
+
+
+
+
+
     },
-    
     ar: {
-        // Navigation
-        "nav-home": "الرئيسية",
-        "nav-about": "عن المدرب",
-        "nav-courses": "برامج التدريب",
-        "nav-pricing": "الأسعار",
-        "nav-gallery": "المعرض",
-        "nav-blog": "المدونة",
-        "nav-blog-details": "تفاصيل المدونة",
-        "nav-elements": "العناصر",
-        "nav-contact": "اتصل بنا",
-        "btn-contact": "اتصل بي",
-        
-        // Hero Section
-        "hero-greeting": "مرحبا أنا زاكسون",
-        "hero-title": "مدرب صالة رياضية محترف",
-        "hero-btn": "عرض برامج التدريب",
-        
-        // Training Categories
-        "cat-personal-title": "التدريب الشخصي",
-        "cat-personal-desc": "احصل على جلسات تدريب شخصية مخصصة لأهدافك الرياضية. إرشاد مهني وخطط تمارين مخصصة للحصول على أفضل النتائج.",
-        "cat-group-title": "التدريب الجماعي",
-        "cat-group-desc": "انضم إلى جلسات التدريب الجماعي النشطة للحصول على الدافع ودعم المجتمع. تمارين فعالة في بيئة جماعية ممتعة ومشجعة.",
-        "btn-view-programs": "عرض البرامج",
-        
-        // Services
-        "services-title": "ما أقدمه",
-        "service-bodybuilding": "بناء الأجسام",
-        "service-bodybuilding-desc": "بناء الكتلة العضلية والقوة مع برامج كمال الأجسام المتخصصة المصممة لجميع المستويات.",
-        "service-muscle-gain": "زيادة العضلات",
-        "service-muscle-gain-desc": "برامج بناء العضلات الفعالة مع إرشادات التغذية المناسبة للحصول على أقصى النتائج.",
-        "service-weight-loss": "فقدان الوزن",
-        "service-weight-loss-desc": "حقق أهدافك في فقدان الوزن مع تمارين القلب وتدريب القوة والإرشاد الغذائي.",
-        
-        // Gallery
-        "gallery-muscle-gain": "بناء العضلات",
-        
-        // Pricing
+        "placeholder_name": "أدخل اسمك",
+        "placeholder_email": "أدخل البريد الإلكتروني",
+        "placeholder_subject": "أدخل الموضوع",
+        "get_in_touch": "تواصل معنا",
+        "placeholder_message": "أدخل الرسالة",
+        "placeholder_name": "أدخل اسمك",
+        "placeholder_email": "البريد الإلكتروني",
+        "placeholder_subject": "أدخل الموضوع",
+        "btn_send": "إرسال",
+        "address_title": "بوتونوود، كاليفورنيا",
+        "address_text": "روز ميد، CA 91770",
+        "phone_number": "+1 253 565 2365",
+        "phone_time": "من الاثنين إلى الجمعة 9 صباحًا حتى 6 مساءً",
+        "email_address": "support@colorlib.com",
+        "email_text": "أرسل لنا استفسارك في أي وقت!",
+
+
+        "hero-title-about": "من أنا",
+        "hero-contact-me": "اتصل بي",
+
+        "home": "الرئيسية",
+        "about": "عن الشركة",
+        "courses": "الدورات",
+        "pricing": "الأسعار",
+        "gallery": "المعرض",
+        "blog": "المدونة",
+        "blog-details": "تفاصيل المدونة",
+        "elements": "العناصر",
+        "contact": "اتصل بنا",
+        "contact-me": "اتصل بي",
+        "greeting": "مرحبًا، هذا زاكصون",
+        "job": "مدرب رياضي",
+        "my-courses": "دوراتي",
+        "personal-training": "تدريب فردي",
+        "personal-desc": "ستنظر في الرسوم البيانية والجداول في المهمة الأولى، كيفية التعامل مع المهمة واللغة اللازمة للإجابة الناجحة.",
+        "group-training": "تدريب جماعي",
+        "group-desc": "ستنظر في الرسوم البيانية والجداول في المهمة الأولى، كيفية التعامل مع المهمة واللغة اللازمة للإجابة الناجحة.",
+        "what-i-offer": "ما أقدمه",
+        "body-building": "بناء الجسم",
+        "body-desc": "ستنظر في الرسوم البيانية والجداول في المهمة الأولى، كيفية التعامل مع المهمة",
+        "muscle-gain": "زيادة العضلات",
+        "muscle-desc": "ستنظر في الرسوم البيانية والجداول في المهمة الأولى، كيفية التعامل مع المهمة",
+        "weight-loss": "فقدان الوزن",
+        "weight-desc": "ستنظر في الرسوم البيانية والجداول في المهمة الأولى، كيفية التعامل مع المهمة",
+        "view-courses": "عرض الدورات",
+        "muscle-gaining": "زيادة العضلات",
         "pricing-title": "الأسعار",
-        "pricing-6month": "6 أشهر",
-        "pricing-price": "30$/شهر",
-        "pricing-single-class": "(جلسة واحدة)",
-        "feature-free-riding": "ركوب مجاني",
-        "feature-unlimited-equipment": "معدات غير محدودة",
-        "feature-personal-trainer": "مدرب شخصي",
-        "feature-weight-loss-classes": "دروس فقدان الوزن",
-        "feature-month-to-month": "شهريا",
-        "btn-join-now": "انضم الآن",
-        
-        // About
-        "about-title": "عن المدرب",
-        "about-desc1": "أنا مدرب لياقة بدنية محترف معتمد مع أكثر من 10 سنوات من الخبرة في مساعدة الناس على تحقيق أهدافهم الرياضية. نهجي يجمع بين طرق التدريب المثبتة والاهتمام الشخصي لضمان أقصى النتائج.",
-        "about-desc2": "سواء كنت تريد بناء العضلات أو فقدان الوزن أو تحسين لياقتك العامة أقدم برامج تدريب شاملة مصممة خصيصا لاحتياجاتك وأهدافك.",
-        "btn-my-courses": "برامج التدريب",
-        
-        // Blog
+        "six-month": "٦ أشهر",
+        "price": "٣٠$/شهر",
+        "single-class": "(حصة واحدة)",
+        "free-riding": "ركوب مجاني",
+        "unlimited-equipments": "معدات غير محدودة",
+        "personal-trainer": "مدرب شخصي",
+        "weight-losing": "حصص فقدان الوزن",
+        "month-to-month": "شهريًا",
+        "join-now": "انضم الآن",
+        "about-title": "عني",
+        "about-p1": "ستنظر إلى الرسوم البيانية في المهمة الأولى، وكيفية التعامل مع المهمة واللغة اللازمة للإجابة الناجحة. ستقوم بفحص أسئلة المهمة الثانية وتتعلم كيفية التخطيط والكتابة والتحقق من المقالات الأكاديمية.",
+        "about-p2": "المهمة الأولى، كيفية التعامل مع المهمة واللغة اللازمة للإجابة الناجحة. ستقوم بفحص أسئلة المهمة الثانية وتتعلم كيفية التخطيط والكتابة والتحقق من المقالات الأكاديمية.",
+        "about-btn": "دوراتي",
         "blog-title": "من المدونة",
-        "blog-category": "الصالة الرياضية واللياقة",
-        "blog-post1": "نصائح أساسية لبناء العضلات الفعال",
-        "blog-post2": "دليل التغذية لنجاح فقدان الوزن",
-        
-        // Contact
-        "contact-location": "الموقع",
-        "contact-location-desc": "قم بزيارة مركز اللياقة البدنية الحديث في قلب المدينة",
-        "contact-phone": "الهاتف",
-        "contact-email": "البريد الإلكتروني",
-        
-        // Footer
-        "footer-copyright": "جميع الحقوق محفوظة | هذا القالب من صنع",
-        "footer-by": "بواسطة",
-        
-        // Language Switcher
-        "lang-english": "English",
-        "lang-arabic": "العربية"
+        "blog-cat1": "رياضة ولياقة",
+        "blog-title1": "خيارات المضاد الحيوي من يوم إلى 10 أيام",
+        "blog-cat2": "رياضة ولياقة",
+        "blog-title2": "خيارات المضاد الحيوي من يوم إلى 10 أيام",
+        "service-title1": "الموقع",
+        "service-desc1": "ستنظر إلى الرسوم البيانية والمخططات في المهمة الأولى، كيفية التعامل",
+        "service-title2": "الهاتف",
+        "service-phone1": "(90) 277 278 2566",
+        "service-phone2": "(78) 267 256 2578",
+        "service-title3": "البريد الإلكتروني",
+        "service-email1": "jacson767@gmail.com",
+        "service-email2": "contact56@zacsion.com",
+        "footer-home": "الرئيسية",
+        "footer-about": "من نحن",
+        "footer-courses": "الدورات",
+        "footer-pricing": "الأسعار",
+        "footer-gallery": "المعرض",
+
+        "hero-title": "عنّي",
+        "team1-title": "بناء الجسم",
+        "team1-desc": "تعلم تقنيات بناء الجسم الصحيحة.",
+        "team1-img": "assets/img/gallery/team1.png",
+        "team2-title": "زيادة العضلات",
+        "team2-desc": "نصائح وتمارين لزيادة العضلات.",
+        "team2-img": "assets/img/gallery/team2.png",
+        "team3-title": "فقدان الوزن",
+        "team3-desc": "استراتيجيات فعالة لفقدان الوزن.",
+        "team3-img": "assets/img/gallery/team3.png",
+        "about-title": "عنّي",
+        "about-desc1": "أنا مدرب محترف مع سنوات من الخبرة.",
+        "about-desc2": "أساعد العملاء على الوصول إلى أهدافهم في اللياقة البدنية بكفاءة.",
+        "about-btn": "دوراتي",
+        "about-img": "assets/img/gallery/about.png",
+        "blog-title": "من المدونة",
+        "blog1-title": "أفضل 10 نصائح للياقة البدنية",
+        "blog1-category": "لياقة بدنية",
+        "blog1-img": "assets/img/gallery/blog1.png",
+        "blog2-title": "عادات الأكل الصحي",
+        "blog2-category": "تغذية",
+        "blog2-img": "assets/img/gallery/blog2.png",
+        "hero-title": "الدورات",
+        "offer-title": "ما أقدمه",
+        "team1-title": "بناء الجسم",
+        "team1-desc": "تعلم تقنيات بناء الجسم الصحيحة.",
+        "team1-img": "assets/img/gallery/team1.png",
+        "team2-title": "زيادة العضلات",
+        "team2-desc": "نصائح وتمارين لزيادة العضلات.",
+        "team2-img": "assets/img/gallery/team2.png",
+        "team3-title": "فقدان الوزن",
+        "team3-desc": "استراتيجيات فعالة لفقدان الوزن.",
+        "team3-img": "assets/img/gallery/team3.png",
+        "cat1-title": "تدريب شخصي",
+        "cat1-desc": "تعلم كيفية التدريب الفردي للحصول على أفضل النتائج.",
+        "cat1-img": "assets/img/gallery/cat1.png",
+        "cat1-btn": "عرض الدورات",
+        "cat2-title": "تدريب جماعي",
+        "cat2-desc": "تدرب ضمن مجموعة وحافظ على تحفيزك.",
+        "cat2-img": "assets/img/gallery/cat2.png",
+        "cat2-btn": "عرض الدورات",
+        "hero-title": "الأسعار",
+        "hero-title-pricing": "الأسعار",
+        "footer-contact": "اتصل بنا",
+        "hero-title-gallery": "المعرض",
+        "hero-title-courses": "الدورات",
+
+
+
+
+
+
     }
 };
 
-// Translation System
-class TranslationSystem {
-    constructor() {
-        this.currentLanguage = localStorage.getItem('language') || 'en';
-        this.init();
-    }
-    
-    init() {
-        this.addLanguageSwitcher();
-        this.translatePage();
-        this.setupEventListeners();
-    }
-    
-    addLanguageSwitcher() {
-        const switcher = document.createElement('div');
-        switcher.className = 'language-switcher';
-        switcher.innerHTML = `
-            <button class="lang-btn ${this.currentLanguage === 'en' ? 'active' : ''}" data-lang="en">English</button>
-            <button class="lang-btn ${this.currentLanguage === 'ar' ? 'active' : ''}" data-lang="ar">العربية</button>
-        `;
-        document.body.appendChild(switcher);
-    }
-    
-    translatePage() {
-        const elements = document.querySelectorAll('[data-translate]');
-        elements.forEach(element => {
-            const key = element.getAttribute('data-translate');
-            if (translations[this.currentLanguage] && translations[this.currentLanguage][key]) {
-                element.textContent = translations[this.currentLanguage][key];
-            }
-        });
-        
-        // Update page direction
-        document.documentElement.setAttribute('dir', this.currentLanguage === 'ar' ? 'rtl' : 'ltr');
-        document.documentElement.setAttribute('lang', this.currentLanguage);
-        document.body.className = this.currentLanguage === 'ar' ? 'rtl' : '';
-    }
-    
-    changeLanguage(lang) {
-        this.currentLanguage = lang;
-        localStorage.setItem('language', lang);
-        this.translatePage();
-        this.updateLanguageButtons();
-    }
-    
-    updateLanguageButtons() {
-        const buttons = document.querySelectorAll('.lang-btn');
-        buttons.forEach(btn => {
-            btn.classList.remove('active');
-            if (btn.getAttribute('data-lang') === this.currentLanguage) {
-                btn.classList.add('active');
-            }
-        });
-    }
-    
-    setupEventListeners() {
-        document.addEventListener('click', (e) => {
-            if (e.target.classList.contains('lang-btn')) {
-                const lang = e.target.getAttribute('data-lang');
-                this.changeLanguage(lang);
-            }
-        });
-    }
+// Get all elements with data-key
+function getAllTranslatableElements() {
+    return Array.from(document.querySelectorAll('[data-key]'));
 }
 
-// Initialize translation system when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    new TranslationSystem();
+// Translate everything with data-key
+function translateNavbar(lang = 'en') {
+    const elements = getAllTranslatableElements();
+    elements.forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (!translations[lang][key]) return;
+
+        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+            // Set placeholder for inputs/textareas
+            el.placeholder = translations[lang][key];
+
+            // Dynamic onfocus/onblur
+            el.onfocus = () => el.placeholder = '';
+            el.onblur = () => el.placeholder = translations[lang][key];
+        } else {
+            // Set text content for other elements
+            el.textContent = translations[lang][key];
+        }
+    });
+
+    // Optional: RTL for Arabic
+    document.body.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+}
+
+// Default language
+document.addEventListener("DOMContentLoaded", () => {
+    translateNavbar('en'); // default English
 });
+
+// Expose globally
+window.setLanguage = translateNavbar;
