@@ -6,55 +6,81 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\PackageController;
 use App\Http\Controllers\Admin\GuestMessageController;
 use App\Http\Controllers\User\UserController;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Session;
 
-
-
-
-
+// 🌍 Default route
 Route::get('/', function () {
     return view('web.index');
 });
 
-Route::post('guest/messages', [GuestMessageController::class, 'store']); // guest sends message
+// 🌐 Language switcher
+Route::get('lang/{lang}', function ($lang) {
+    if (in_array($lang, ['en', 'ar'])) {
+        Session::put('locale', $lang);
+        App::setLocale($lang);
+    }
+    return redirect()->back();
+})->name('lang.switch');
 
+// ✉️ Guest sends message
+Route::post('guest/messages', [GuestMessageController::class, 'store'])->name('guest.messages.store');
 
-
-
+// ============================
+// 🔐 Admin Routes
+// ============================
 Route::prefix('admin')->group(function () {
+
+    // 🧩 Auth
     Route::get('/login', [AuthController::class, 'showLoginForm'])->name('admin.login');
     Route::post('/login', [AuthController::class, 'login'])->name('admin.login.post');
+    Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('admin.register');
+    Route::post('/register', [AuthController::class, 'register'])->name('admin.register.post');
 
-
+    // Protected routes
     Route::middleware('auth:admin')->group(function () {
+
+        // 🏠 Dashboard
         Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
 
-        Route::get('packages', [PackageController::class, 'index'])->name('packages.index');
-        Route::get('packages/create', [PackageController::class, 'create'])->name('packages.create');
-        Route::post('packages/store', [PackageController::class, 'store'])->name('packages.store');
-        Route::get('packages/edit/{id}', [PackageController::class, 'edit'])->name('packages.edit');
-        Route::post('packages/update/{id}', [PackageController::class, 'update'])->name('packages.update');
-        Route::get('packages/delete/{id}', [PackageController::class, 'destroy'])->name('packages.destroy');
+        // 📦 Packages
+        Route::get('/packages', [PackageController::class, 'index'])->name('admin.packages.index');
+        Route::get('/packages/create', [PackageController::class, 'create'])->name('admin.packages.create');
+        Route::post('/packages/store', [PackageController::class, 'store'])->name('admin.packages.store');
+        Route::get('/packages/edit/{id}', [PackageController::class, 'edit'])->name('admin.packages.edit');
+        Route::post('/packages/update/{id}', [PackageController::class, 'update'])->name('admin.packages.update');
+        Route::get('/packages/delete/{id}', [PackageController::class, 'destroy'])->name('admin.packages.destroy');
 
-        Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
-        Route::post('/register', [AuthController::class, 'register'])->name('register.post');
-        Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+        // 👤 Users
+        Route::get('/users', [UserController::class, 'index'])->name('admin.users.index');
+        Route::get('/users/create', [UserController::class, 'create'])->name('admin.users.create');
+        Route::post('/users/store', [UserController::class, 'store'])->name('admin.users.store');
+        Route::get('/users/edit/{id}', [UserController::class, 'edit'])->name('admin.users.edit');
+        Route::post('/users/update/{id}', [UserController::class, 'update'])->name('admin.users.update');
+        Route::get('/users/delete/{id}', [UserController::class, 'destroy'])->name('admin.users.destroy');
 
-        Route::get('guest/messages', [GuestMessageController::class, 'index']); // list messages
-        Route::delete('guest/messages/{id}', [GuestMessageController::class, 'destroy']); // delete
+        // 🧑‍💻 Guest Users
+        Route::get('/guests', [GuestMessageController::class, 'index'])->name('admin.guests.index');
+        Route::get('/guests/show/{id}', [GuestMessageController::class, 'show'])->name('admin.guests.show');
+        Route::delete('/guests/delete/{id}', [GuestMessageController::class, 'destroy'])->name('admin.guests.destroy');
+        Route::post('/guests/{id}/convert', [GuestMessageController::class, 'convertGuestToUser'])->name('admin.guests.convert');
 
-        Route::post('admin/guest/{id}/convert', [GuestMessageController::class, 'convertGuestToUser']);
+        // ⚙️ Settings (optional)
+        Route::get('/settings', [AdminController::class, 'settings'])->name('admin.settings');
 
+        // 🚪 Logout
+        Route::post('/logout', [AuthController::class, 'logout'])->name('admin.logout');
     });
 });
 
-
+// ============================
+// 👤 User Routes (normal users)
+// ============================
 Route::middleware(['auth'])->group(function () {
-    Route::get('/user/profile', [UserController::class, 'profile']);
-    Route::post('/user/profile/update', [UserController::class, 'updateProfile']);
-
-    Route::post('/user/file/upload', [UserController::class, 'uploadFile']);
-    Route::get('/user/files', [UserController::class, 'myFiles']);
-    Route::delete('/user/file/{id}', [UserController::class, 'deleteFile']);
-
-    Route::get('/user/workouts', [UserController::class, 'myWorkouts']);
+    Route::get('/user/profile', [UserController::class, 'profile'])->name('user.profile');
+    Route::post('/user/profile/update', [UserController::class, 'updateProfile'])->name('user.profile.update');
+    Route::post('/user/file/upload', [UserController::class, 'uploadFile'])->name('user.file.upload');
+    Route::get('/user/files', [UserController::class, 'myFiles'])->name('user.files');
+    Route::delete('/user/file/{id}', [UserController::class, 'deleteFile'])->name('user.file.delete');
+    Route::get('/user/workouts', [UserController::class, 'myWorkouts'])->name('user.workouts');
 });
