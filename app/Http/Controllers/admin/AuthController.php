@@ -7,6 +7,8 @@ use App\Models\Admin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use App\Services\DataTableService;
+
 
 
 class AuthController extends Controller

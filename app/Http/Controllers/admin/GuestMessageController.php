@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\GuestMessage;
 use App\Models\User;
 use Illuminate\Support\Str;
+use App\Services\DataTableService;
+
 
 class GuestMessageController extends Controller
 {

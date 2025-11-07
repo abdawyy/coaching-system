@@ -1,10 +1,20 @@
 @extends('layouts.admin')
 
-@section('title', __('dashboard.title'))
-
 @section('content')
 <div class="container">
-    <h1>{{ __('dashboard.dashboard') }}</h1>
-    <p class="text-muted">{{ __('dashboard.admin_panel') }}</p>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h4>{{ __('admins.title') }}</h4>
+
+        <a href="{{ route('admin.admin.create') }}" class="btn btn-primary">
+            <i class="bi bi-plus-circle me-1"></i> {{ __('admins.create_button') }}
+        </a>
+    </div>
+
+    <x-datatable 
+        :ajaxUrl="route('admin.admin.data')" 
+        :columns="$columns" 
+        :renderComponents="$renderComponents"
+        :customActionsView="$customActionsView" 
+    />
 </div>
 @endsection

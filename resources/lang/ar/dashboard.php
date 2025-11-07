@@ -11,5 +11,7 @@ return [
     'all_rights_reserved' => 'جميع الحقوق محفوظة.',
     'packages'     => 'الباقات',
     'guest_users'  => 'الزوار',
+        'admins' => 'المدراء', // ✅ Added line
+
 
 ];

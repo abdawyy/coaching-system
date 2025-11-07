@@ -10,6 +10,8 @@ use App\Models\UserWorkout;
 use App\Models\UserFile;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
+use App\Services\DataTableService;
+
 
 class UserController extends Controller
 {

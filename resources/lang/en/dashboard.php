@@ -11,5 +11,7 @@ return [
     'all_rights_reserved' => 'All Rights Reserved.',
     'packages'     => 'Packages',
     'guest_users'  => 'Guest Users',
+        'admins' => 'Admins', // ✅ Added line
+
 
 ];

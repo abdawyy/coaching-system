@@ -6,32 +6,61 @@ use App\Models\Admin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Controllers\Controller; // ✅ Make sure this line exists
+use App\Models\Package;
+use App\Models\User;
+use App\Models\GuestMessage;
+use App\Services\DataTables\BaseDataTable;
+
 
 
 class AdminController extends Controller
 {
-    public function index()
+    public function dashboard()
     {
         $admins = Admin::latest()->paginate(10);
-        return view('admin.admin.index', compact('admins'));
+        $packagesCount = Package::count();
+        $guestUsersCount = GuestMessage::count();
+        $usersCount = User::count();
+        return view('admin.dashboard', compact('packagesCount', 'guestUsersCount', 'usersCount', 'admins'));
+    }
+
+    public function index()
+    {
+        $columns = ['id', 'name', 'email'];
+        $renderComponents = true; // or false based on your condition
+        $customActionsView = 'components.default-buttons-table'; // full view path
+
+        return view('admin.admin.index', compact('columns', 'renderComponents', 'customActionsView'));
     }
 
     public function create()
     {
         return view('admin.admin.create');
     }
+    public function data(Request $request)
+    {
+        $query = Admin::query();
+        $columns = ['id', 'name', 'email'];
+
+        $service = new BaseDataTable($query, $columns, true, 'components.default-buttons-table');
+        // Optional: send extra props to the view (e.g. routeName)
+        $service->setActionProps([
+            'routeName' => 'admin.admin',
+        ]);
+        return $service->make($request);
+    }
 
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'name'     => 'required|string|max:255',
-            'email'    => 'required|email|unique:admins,email',
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:admins,email',
             'password' => 'required|min:6',
         ]);
 
         Admin::create([
-            'name'     => $validated['name'],
-            'email'    => $validated['email'],
+            'name' => $validated['name'],
+            'email' => $validated['email'],
             'password' => Hash::make($validated['password']),
         ]);
 
@@ -40,13 +69,13 @@ class AdminController extends Controller
 
     public function edit(Admin $admin)
     {
-        return view('admin.edit', compact('admin'));
+        return view('admin.admin.edit', compact('admin'));
     }
 
     public function update(Request $request, Admin $admin)
     {
         $validated = $request->validate([
-            'name'  => 'required|string|max:255',
+            'name' => 'required|string|max:255',
             'email' => 'required|email|unique:admins,email,' . $admin->id,
         ]);
 

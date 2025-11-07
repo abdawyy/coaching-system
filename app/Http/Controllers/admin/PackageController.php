@@ -6,6 +6,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller; //
 use App\Models\Package;
 use Illuminate\Http\Request;
+use App\Services\DataTableService;
+
 
 class PackageController extends Controller
 {

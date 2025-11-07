@@ -16,6 +16,8 @@
             🧑‍💻 {{ __('dashboard.guest_users') }}
         </a>
 
-     
+        <a href="{{ route('admin.admin.index') }}" class="{{ request()->routeIs('admin.admin.*') ? 'active' : '' }}">
+            🔑 {{ __('dashboard.admins') }}
+        </a>
     </nav>
 </aside>

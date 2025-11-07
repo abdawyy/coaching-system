@@ -41,7 +41,17 @@ Route::prefix('admin')->group(function () {
     Route::middleware('auth:admin')->group(function () {
 
         // 🏠 Dashboard
-        Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+        Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+
+        // Admin CRUD
+        Route::get('/admins', [AdminController::class, 'index'])->name('admin.admin.index');
+        Route::get('/admins/data', [AdminController::class, 'data'])->name('admin.admin.data'); // for DataTables
+        Route::get('/admins/create', [AdminController::class, 'create'])->name('admin.admin.create');
+        Route::post('/admins', [AdminController::class, 'store'])->name('admin.admin.store');
+        Route::get('/admins/{admin}/edit', [AdminController::class, 'edit'])->name('admin.admin.edit');
+        Route::put('/admins/{admin}', [AdminController::class, 'update'])->name('admin.admin.update');
+        Route::delete('/admins/{admin}', [AdminController::class, 'destroy'])->name('admin.admin.destroy');
+
 
         // 📦 Packages
         Route::get('/packages', [PackageController::class, 'index'])->name('admin.packages.index');
