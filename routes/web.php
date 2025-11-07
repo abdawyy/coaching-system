@@ -6,6 +6,8 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\PackageController;
 use App\Http\Controllers\Admin\GuestMessageController;
 use App\Http\Controllers\User\UserController;
+use App\Http\Controllers\Web\PageController;
+
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
 
@@ -22,6 +24,14 @@ Route::get('lang/{lang}', function ($lang) {
     }
     return redirect()->back();
 })->name('lang.switch');
+
+Route::controller(PageController::class)->group(function () {
+    Route::get('/', 'home')->name('home');
+    Route::get('/about', 'about')->name('about');
+    Route::get('/courses', 'courses')->name('courses');
+    Route::get('/pricing', 'pricing')->name('pricing');
+    Route::get('/gallery', 'gallery')->name('gallery');
+});
 
 // ✉️ Guest sends message
 Route::post('guest/messages', [GuestMessageController::class, 'store'])->name('guest.messages.store');
