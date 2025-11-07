@@ -7,49 +7,48 @@ use Illuminate\Http\Request;
 use App\Models\GuestMessage;
 use App\Models\User;
 use Illuminate\Support\Str;
-use App\Services\DataTableService;
+use App\Services\DataTables\BaseDataTable;
 
 
 class GuestMessageController extends Controller
 {
     // Show all guest messages in admin dashboard
+
     public function index()
     {
-        $messages = GuestMessage::latest()->paginate(10);
-        return view('admin.guest_messages.index', compact('messages'));
+        $columns = [
+            'id',
+            'name',
+            'email',
+            'mobile',
+            'message'
+        ];
+        $renderComponents = true; // or false based on your condition
+        $customActionsView = 'components.default-buttons-table'; // full view path
+
+        return view('admin.guest.index', compact('columns', 'renderComponents', 'customActionsView'));
     }
 
-    // Show form to create a guest message (optional)
-    public function create()
-    {
-        return view('admin.guest_messages.create');
-    }
 
-    // Store a new guest message (can be from frontend or admin)
-    public function store(Request $request)
+    public function data(Request $request)
     {
-        $request->validate([
-            'name' => 'nullable|string|max:255',
-            'email' => 'nullable|email|max:255',
-            'mobile' => 'nullable|string|max:20',
-            'message' => 'required|string|max:2000',
+        $query = GuestMessage::query();
+        $columns = [
+            'id',
+            'name',
+            'email',
+            'mobile',
+            'message'
+        ];
+        $service = new BaseDataTable($query, $columns, true, 'components.default-buttons-table');
+        // Optional: send extra props to the view (e.g. routeName)
+        $service->setActionProps([
+            'routeName' => 'admin.guest',
         ]);
-
-        GuestMessage::create($request->only('name', 'email', 'mobile', 'message'));
-
-        return redirect()->route('admin.guest_messages.index')
-                         ->with('success', 'Message sent successfully!');
+        return $service->make($request);
     }
 
-    // Delete a message
-    public function destroy($id)
-    {
-        $message = GuestMessage::findOrFail($id);
-        $message->delete();
 
-        return redirect()->route('admin.guest_messages.index')
-                         ->with('success', 'Message deleted successfully.');
-    }
 
     // Convert guest message to user
     public function convertGuestToUser($guestId)
@@ -68,7 +67,7 @@ class GuestMessageController extends Controller
         $guest->user_id = $user->id;
         $guest->save();
 
-        return redirect()->route('admin.guest_messages.index')
-                         ->with('success', 'Guest converted to user successfully!');
+        return redirect()->route('admin.guest.index')
+            ->with('success', 'Guest converted to user successfully!');
     }
 }

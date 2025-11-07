@@ -71,17 +71,23 @@ class AdminController extends Controller
     {
         return view('admin.admin.edit', compact('admin'));
     }
-
     public function update(Request $request, Admin $admin)
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:admins,email,' . $admin->id,
+            'password' => 'nullable|min:6',
         ]);
+
+        if (!empty($validated['password'])) {
+            $validated['password'] = Hash::make($validated['password']);
+        } else {
+            unset($validated['password']);
+        }
 
         $admin->update($validated);
 
-        return redirect()->route('admin.admin.index')->with('success', 'Admin updated successfully.');
+        return redirect()->route('admin.admin.index')->with('success', __('admins.updated_success'));
     }
 
     public function destroy(Admin $admin)

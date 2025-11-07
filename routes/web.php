@@ -60,6 +60,8 @@ Route::prefix('admin')->group(function () {
         Route::get('/packages/edit/{id}', [PackageController::class, 'edit'])->name('admin.packages.edit');
         Route::post('/packages/update/{id}', [PackageController::class, 'update'])->name('admin.packages.update');
         Route::get('/packages/delete/{id}', [PackageController::class, 'destroy'])->name('admin.packages.destroy');
+        Route::get('/packages/data', [PackageController::class, 'data'])->name('admin.packages.data'); // for DataTables
+
 
         // 👤 Users
         Route::get('/users', [UserController::class, 'index'])->name('admin.users.index');
@@ -71,8 +73,8 @@ Route::prefix('admin')->group(function () {
 
         // 🧑‍💻 Guest Users
         Route::get('/guests', [GuestMessageController::class, 'index'])->name('admin.guests.index');
-        Route::get('/guests/show/{id}', [GuestMessageController::class, 'show'])->name('admin.guests.show');
-        Route::delete('/guests/delete/{id}', [GuestMessageController::class, 'destroy'])->name('admin.guests.destroy');
+        Route::get('/guests/data', [GuestMessageController::class, 'data'])->name('admin.guests.data');
+
         Route::post('/guests/{id}/convert', [GuestMessageController::class, 'convertGuestToUser'])->name('admin.guests.convert');
 
         // ⚙️ Settings (optional)
