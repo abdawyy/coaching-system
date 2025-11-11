@@ -32,4 +32,9 @@ class PageController extends Controller
     {
         return view('web.gallery');
     }
+
+     public function contact()
+    {
+        return view('web.contact');
+    }
 }

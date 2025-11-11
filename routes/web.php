@@ -10,6 +10,11 @@ use App\Http\Controllers\Web\PageController;
 
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
+use App\Http\Controllers\Web\GuestMessageController as WebGuestMessage;
+
+Route::post('/guest-messages', [WebGuestMessage::class, 'store'])
+    ->name('guest-messages.store');
+
 
 // 🌍 Default route
 Route::get('/', function () {
@@ -31,6 +36,8 @@ Route::controller(PageController::class)->group(function () {
     Route::get('/courses', 'courses')->name('courses');
     Route::get('/pricing', 'pricing')->name('pricing');
     Route::get('/gallery', 'gallery')->name('gallery');
+    Route::get('/contact', 'contact')->name('contact');
+
 });
 
 // ✉️ Guest sends message

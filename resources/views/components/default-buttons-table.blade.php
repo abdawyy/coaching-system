@@ -37,7 +37,7 @@
     @endif
 
     @if(isset($routeName) && $routeName === 'admin.guest')
-    <a href="{{ route('admin.guest.convert', $row->id) }}" 
+    <a href="{{ route('admin.guests.convert', $model->id) }}" 
        class="btn btn-sm btn-warning">
         <i class="bi bi-person-plus"></i> {{ __('guest_messages.convert') }}
     </a>
