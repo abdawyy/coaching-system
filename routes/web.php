@@ -5,7 +5,7 @@ use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\PackageController;
 use App\Http\Controllers\Admin\GuestMessageController;
-use App\Http\Controllers\User\UserController;
+use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Web\PageController;
 
 use Illuminate\Support\Facades\App;
@@ -87,12 +87,18 @@ Route::prefix('admin')->group(function () {
         Route::get('/users/edit/{id}', [UserController::class, 'edit'])->name('admin.users.edit');
         Route::post('/users/update/{id}', [UserController::class, 'update'])->name('admin.users.update');
         Route::get('/users/delete/{id}', [UserController::class, 'destroy'])->name('admin.users.destroy');
+        Route::get('/users/data', [UserController::class, 'data'])->name('admin.users.data'); // for DataTables
+        // routes/web.php or routes/admin.php
+        Route::delete('admin/users/files/{file}', [UserController::class, 'deleteFile'])
+            ->name('admin.users.deleteFile');
+
+
 
         // 🧑‍💻 Guest Users
         Route::get('/guests', [GuestMessageController::class, 'index'])->name('admin.guests.index');
         Route::get('/guests/data', [GuestMessageController::class, 'data'])->name('admin.guests.data');
 
-        Route::post('/guests/{id}/convert', [GuestMessageController::class, 'convertGuestToUser'])->name('admin.guests.convert');
+        Route::get('/guests/{id}/convert', [GuestMessageController::class, 'convertGuestToUser'])->name('admin.guests.convert');
 
         // ⚙️ Settings (optional)
         Route::get('/settings', [AdminController::class, 'settings'])->name('admin.settings');

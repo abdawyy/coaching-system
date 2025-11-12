@@ -8,6 +8,8 @@ use App\Models\GuestMessage;
 use App\Models\User;
 use Illuminate\Support\Str;
 use App\Services\DataTables\BaseDataTable;
+use Illuminate\Support\Facades\Hash;
+
 
 
 class GuestMessageController extends Controller
@@ -59,7 +61,7 @@ class GuestMessageController extends Controller
             ['email' => $guest->email],
             [
                 'name' => $guest->name ?? 'Guest',
-                'password' => bcrypt(Str::random(10)),
+                'password' => Hash::make('Admin123'),
                 'mobile' => $guest->mobile,
             ]
         );
@@ -67,7 +69,7 @@ class GuestMessageController extends Controller
         $guest->user_id = $user->id;
         $guest->save();
 
-        return redirect()->route('admin.guest.index')
+        return redirect()->route('admin.guests.index')
             ->with('success', 'Guest converted to user successfully!');
     }
 }
