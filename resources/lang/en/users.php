@@ -43,4 +43,36 @@ return [
 
     // Buttons
     'save_changes' => 'Save Changes',
+
+        'login_title' => 'User Login',
+    'register_title' => 'Create Account',
+    'login_button' => 'Login',
+    'register_button' => 'Register',
+  
+    'password_confirm' => 'Confirm Password',
+    'remember_me' => 'Remember Me',
+    'no_account' => "Don't have an account?",
+    'register_now' => 'Register Now',
+    'have_account' => 'Already have an account?',
+    'login_here' => 'Login here',
+    'login_success' => 'Logged in successfully!',
+    'login_failed' => 'Invalid credentials.',
+    'register_success' => 'Account created successfully!',
+    'logout_success' => 'Logged out successfully!',
+
+       'profile_title' => 'My Profile',
+  
+    'password_confirmation' => 'Confirm Password',
+    'leave_blank' => 'Leave blank to keep current password',
+    'update_profile' => 'Update Profile',
+    'upload_files' => 'Upload Files',
+    'file_description' => 'File Description (optional)',
+    'add_file' => 'Add Another File',
+    'my_files' => 'My Files',
+    'download' => 'Download',
+    'delete' => 'Delete',
+    'no_files' => 'No files uploaded yet.',
+    'my_workouts' => 'My Workouts',
+    'no_workouts' => 'No workouts added yet.',
+    'no_title' => 'No title',
 ];

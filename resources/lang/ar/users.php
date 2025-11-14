@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'title' => 'المستخدمين',
+    'title' => 'المستخدمون',
     'create_button' => 'إضافة مستخدم',
     'edit_button' => 'تعديل المستخدم',
     'update_button' => 'تحديث المستخدم',
@@ -24,21 +24,55 @@ return [
     'workout_added' => 'تمت إضافة التمرين بنجاح.',
     'workout_deleted' => 'تم حذف التمرين بنجاح.',
     'workout_title' => 'عنوان التمرين',
-    'workout_link' => 'رابط التمرين (يوتيوب أو غيره)',
+    'workout_link' => 'رابط التمرين (يوتيوب إلخ)',
     'workout_description' => 'وصف التمرين',
     // General
     'edit_title' => 'تعديل المستخدم',
-    'back_to_list' => 'العودة إلى القائمة',
+    'back_to_list' => 'العودة للقائمة',
+
     'phone' => 'رقم الهاتف',
-    'password_placeholder' => 'اتركها فارغة للاحتفاظ بكلمة المرور الحالية',
-    'leave_blank_to_keep' => 'اترك هذا الحقل فارغًا إذا كنت لا ترغب في تغيير كلمة المرور',
-    'avatar' => 'الصورة الشخصية',
+    'password_placeholder' => 'اتركه فارغًا للحفاظ على كلمة المرور الحالية',
+    'leave_blank_to_keep' => 'اترك هذا الحقل فارغًا إذا لم ترغب بتغيير كلمة المرور',
+    'avatar' => 'صورة الملف الشخصي',
 
     // Workouts
     'workouts_title' => 'تمارين المستخدم',
+
     'remove_workout' => 'حذف التمرين',
     'add_workout' => 'إضافة تمرين',
 
     // Buttons
     'save_changes' => 'حفظ التغييرات',
+
+    'login_title' => 'تسجيل الدخول',
+    'register_title' => 'إنشاء حساب',
+    'login_button' => 'تسجيل الدخول',
+    'register_button' => 'تسجيل',
+
+    'password_confirm' => 'تأكيد كلمة المرور',
+    'remember_me' => 'تذكرني',
+    'no_account' => 'ليس لديك حساب؟',
+    'register_now' => 'سجل الآن',
+    'have_account' => 'لديك حساب؟',
+    'login_here' => 'سجل الدخول هنا',
+    'login_success' => 'تم تسجيل الدخول بنجاح!',
+    'login_failed' => 'بيانات الدخول غير صحيحة.',
+    'register_success' => 'تم إنشاء الحساب بنجاح!',
+    'logout_success' => 'تم تسجيل الخروج بنجاح!',
+
+    'profile_title' => 'ملفي الشخصي',
+
+    'password_confirmation' => 'تأكيد كلمة المرور',
+    'leave_blank' => 'اتركه فارغًا للحفاظ على كلمة المرور الحالية',
+    'update_profile' => 'تحديث الملف الشخصي',
+    'upload_files' => 'رفع الملفات',
+    'file_description' => 'وصف الملف (اختياري)',
+    'add_file' => 'إضافة ملف آخر',
+    'my_files' => 'ملفاتي',
+    'download' => 'تحميل',
+    'delete' => 'حذف',
+    'no_files' => 'لا توجد ملفات مرفوعة بعد.',
+    'my_workouts' => 'تماريني',
+    'no_workouts' => 'لا توجد تمارين مضافة بعد.',
+    'no_title' => 'بدون عنوان',
 ];
