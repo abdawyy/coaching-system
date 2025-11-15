@@ -20,6 +20,7 @@ class AuthController extends Controller
     // Handle login
     public function login(Request $request)
     {
+        
         $request->validate([
             'email'    => 'required|email',
             'password' => 'required|string',
@@ -27,7 +28,7 @@ class AuthController extends Controller
 
         if (Auth::guard('web')->attempt($request->only('email', 'password'), $request->filled('remember'))) {
             $request->session()->regenerate();
-            return redirect()->intended(route('user.dashboard'))->with('success', __('users.login_success'));
+            return redirect()->intended(route('user.profile'))->with('success', __('users.login_success'));
         }
 
         throw ValidationException::withMessages([
@@ -60,7 +61,7 @@ class AuthController extends Controller
 
         Auth::guard('web')->login($user);
 
-        return redirect()->route('user.dashboard')->with('success', __('users.register_success'));
+        return redirect()->route('user.profile')->with('success', __('users.register_success'));
     }
 
     // Logout user

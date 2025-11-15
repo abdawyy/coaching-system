@@ -16,7 +16,7 @@ class UserController extends Controller
     public function profile()
     {
         $user = Auth::user()->load(['package', 'workouts', 'files']);
-        return view('user.dashboard', compact('user'));
+        return view('user.index', compact('user'));
     }
 
     // Update profile info (name, mobile, password)

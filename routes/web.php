@@ -6,6 +6,10 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\PackageController;
 use App\Http\Controllers\Admin\GuestMessageController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\User\UserController as WebUserController;
+use App\Http\Controllers\User\AuthController as UserAuthController;
+
+
 use App\Http\Controllers\Web\PageController;
 
 use Illuminate\Support\Facades\App;
@@ -111,11 +115,51 @@ Route::prefix('admin')->group(function () {
 // ============================
 // 👤 User Routes (normal users)
 // ============================
-Route::middleware(['auth'])->group(function () {
-    Route::get('/user/profile', [UserController::class, 'profile'])->name('user.profile');
-    Route::post('/user/profile/update', [UserController::class, 'updateProfile'])->name('user.profile.update');
-    Route::post('/user/file/upload', [UserController::class, 'uploadFile'])->name('user.file.upload');
-    Route::get('/user/files', [UserController::class, 'myFiles'])->name('user.files');
-    Route::delete('/user/file/{id}', [UserController::class, 'deleteFile'])->name('user.file.delete');
-    Route::get('/user/workouts', [UserController::class, 'myWorkouts'])->name('user.workouts');
+// Login
+Route::get('/user/login', [UserAuthController::class, 'showLoginForm'])
+    ->name('user.login');
+
+Route::post('/user/login', [UserAuthController::class, 'login'])
+    ->name('user.login.submit');
+
+// Register
+Route::get('/user/register', [UserAuthController::class, 'showRegisterForm'])
+    ->name('user.register');
+
+Route::post('/user/register', [UserAuthController::class, 'register'])
+    ->name('user.register.submit');
+
+// Logout
+Route::post('/user/logout', [UserAuthController::class, 'logout'])
+    ->name('user.logout');
+
+// ====================================
+// Protected Routes (User must be logged in)
+// ====================================
+Route::middleware(['auth:web'])->prefix('user')->name('user.')->group(function () {
+
+    // Dashboard
+    // Route::get('/dashboard', [DashboardController::class, 'index'])
+    //     ->name('dashboard');
+
+    // Profile
+    Route::get('/profile', [WebUserController::class, 'profile'])
+        ->name('profile');
+
+    Route::post('/profile/update', [WebUserController::class, 'updateProfile'])
+        ->name('updateProfile');
+
+    // File Manager
+    Route::post('/file/upload', [WebUserController::class, 'uploadFile'])
+        ->name('uploadFiles');
+
+    Route::get('/files', [WebUserController::class, 'myFiles'])
+        ->name('files');
+
+    Route::delete('/file/{id}', [WebUserController::class, 'deleteFile'])
+        ->name('file.delete');
+
+    // Workouts
+    Route::get('/workouts', [WebUserController::class, 'myWorkouts'])
+        ->name('workouts');
 });

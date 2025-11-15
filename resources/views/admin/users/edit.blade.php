@@ -67,13 +67,12 @@
                                     <a href="{{ asset('storage/' . $file->file_path) }}" download="{{ $fileName }}">Download</a>
                                 @endif
 
-                                {{-- Optional: Delete button --}}
-                                <form action="{{ route('admin.users.deleteFile', $file->id) }}" method="POST"
-                                    onsubmit="return confirm('Are you sure you want to delete this file?');">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-sm btn-danger ms-2">Delete</button>
-                                </form>
+                               <a href="javascript:void(0)" 
+   class="btn btn-sm btn-danger ms-2"
+   onclick="submitDeleteFile({{ $file->id }})">
+    Delete
+</a>
+
                             </div>
                         @endforeach
                     </div>
@@ -111,6 +110,21 @@
             </div>
         </form>
     </div>
+    <form id="deleteFileForm" method="POST" style="display:none;">
+    @csrf
+    @method('get')
+</form>
+
+<script>
+function submitDeleteFile(fileId) {
+    if (!confirm('Are you sure you want to delete this file?')) return;
+
+    let form = document.getElementById('deleteFileForm');
+    form.action = "{{ url('admin/users/delete/') }}/" + fileId;
+    form.submit();
+}
+</script>
+
 
     <script>
         document.getElementById('add-workout').addEventListener('click', function () {
